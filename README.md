@@ -1,6 +1,6 @@
 # Taller individual: Seguridad en Messenger
 
-Implementación simplificada (en memoria, sin red) de dos algoritmos de mensajería segura:
+Implementación simplificada de dos algoritmos de mensajería segura:
 
 - **A1** `a1_cadena.py`: cadena de claves simétrica con HKDF y borrado de claves usadas.
 - **A2** `a2_ratchet.py`: Double Ratchet reducido de 6 mensajes con X25519.
@@ -33,4 +33,3 @@ Al terminar, las pruebas generan automáticamente `resultados.csv` y `log_prueba
 | `resultados.csv`, `log_pruebas.json` | Resultados de la última ejecución |
 | `informe.md` | Informe corto |
 
-Las funciones de prueba se llaman `test_A1_01_...`, `test_A2_04_...`, etc.: el identificador de la tabla (`A2-04`) con guion bajo, porque Python no admite guiones en nombres de función.

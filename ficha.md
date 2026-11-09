@@ -4,7 +4,7 @@
 
 El **cifrado extremo a extremo (E2EE)** hace que un mensaje se cifre en el dispositivo del emisor y solo pueda descifrarse en el del receptor; el servidor y la red solo transportan texto cifrado. Protege la **confidencialidad y la integridad del contenido** frente a quien está en medio (proveedor, operador de red, atacante en la red).
 
-**No protege:** (a) los *metadatos* (quién habla con quién, cuándo, tamaño, dirección IP); (b) los *extremos* comprometidos (malware, dispositivo robado y desbloqueado, capturas de pantalla, copias de seguridad sin cifrar); (c) a un interlocutor que reenvía el contenido; (d) la autenticidad de las claves si los usuarios no las verifican (un servidor malicioso podría sustituir una clave en el primer contacto).
+**No protege:** (a) los metadatos: quién habla con quién, cuándo, tamaño, dirección IP; (b) los extremos comprometidos (malware, dispositivo robado y desbloqueado, capturas de pantalla, copias de seguridad sin cifrar); (c) a un interlocutor que reenvía el contenido; (d) la autenticidad de las claves si los usuarios no las verifican (un servidor malicioso podría sustituir una clave en el primer contacto).
 
 ## Amenaza
 
