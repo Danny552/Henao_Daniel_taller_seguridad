@@ -1,0 +1,10 @@
+id_prueba,algoritmo,propiedad,descripcion,esperado,obtenido,estado,comentario
+A1-01,A1,determinismo,Misma cadena e índice producen la misma clave,misma clave,misma clave,OK,"Además, otra cadena con el mismo índice da otra clave."
+A1-02,A1,unicidad,10 claves de mensaje distintas,10 claves distintas,10 claves distintas,OK,Se probó derivar_clave con índices 0-9 y la cadena que avanza.
+A1-03,A1,cifrado,Cifrar y descifrar 10 mensajes,10/10 correctos,10/10 correctos,OK,Emisor y receptor parten de la misma cadena; una clave ajena no descifra.
+A1-04,A1,borrado,Clave usada y luego borrada no se recupera,no recuperable,no recuperable,OK,Buffer puesto en ceros; ni el estado de la cadena ni 1000 derivaciones lo recuperan.
+A2-01,A2,descifrado,Descifrar los 6 mensajes,6/6 correctos,6/6 correctos,OK,Cambio de dirección en el mensaje 4 con nuevo par X25519: True.
+A2-02,A2,integridad,Un byte alterado del ciphertext,rechazado,rechazado,OK,También se rechaza la cabecera alterada y el mensaje original sigue descifrando.
+A2-03,A2,repetición,Mensaje reenviado,rechazado,rechazado,OK,Se reenviaron el mensaje 1 (a Bob) y el 4 (a Alice); ambos rechazados.
+A2-04,A2,forward secrecy,Estado robado tras mensaje 3 no descifra mensaje 1,no descifrable,no descifrable,OK,Se robó el estado de Bob y de Alice tras el mensaje 3; control con estado previo sí descifra.
+A2-05,A2,post-compromise,Estado robado antes del cambio de dirección no descifra tras él,no descifrable,no descifrable,OK,"Estado de Bob robado antes de su cambio de dirección; no descifra los mensajes 4-6. Control: el estado de Alice, que aún no renovó su par, sí descifra el 4: True."
